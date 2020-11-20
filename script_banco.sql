@@ -25,7 +25,6 @@ CREATE TABLE usuario(
     PRIMARY KEY(id_usuario)
 );
 
-
 -- Criacao da tabela ESTADO
 
 CREATE TABLE estado(
@@ -65,4 +64,26 @@ CREATE TABLE produto(
     estoque DOUBLE,
     ativo BOOLEAN DEFAULT TRUE,
     PRIMARY KEY(id_produto)
+);
+
+-- Criacao da tabela PEDIDO
+
+create table pedido (
+    id_pedido   INT AUTO_INCREMENT,
+    data_pedido DATETIME,
+    id_usuario  INT NOT NULL,
+    PRIMARY KEY (id_pedido),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario));
+
+-- Criacao da tabela ITEM PEDIDO
+
+CREATE TABLE item_pedido(
+    id_item INT AUTO_INCREMENT,
+    id_pedido INT NOT NULL,
+    id_produto INT NOT NULL,
+    qtd INT,
+    valor DECIMAL(9,2),
+    PRIMARY KEY(id_item),
+    FOREIGN KEY (id_pedido) REFERENCES pedido (id_pedido),
+    FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );

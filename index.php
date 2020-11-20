@@ -33,6 +33,8 @@
                 include 'paginas/carrinho.php';
             } else if($pagina == 'produtos'){
                 include 'paginas/produtos.php';
+            } else if($pagina == 'novo_produto'){
+                include 'paginas/cadastro_produto.php';
             } else {
                 include 'paginas/home.php'; 
             }
