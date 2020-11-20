@@ -31,6 +31,8 @@
                 include 'paginas/tipos_usuario.php';
             } else if($pagina == 'carrinho'){
                 include 'paginas/carrinho.php';
+            } else if($pagina == 'produtos'){
+                include 'paginas/produtos.php';
             } else {
                 include 'paginas/home.php'; 
             }
