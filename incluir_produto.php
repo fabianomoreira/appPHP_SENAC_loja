@@ -10,7 +10,6 @@
 
     $titulo    = $_POST['txtTitulo'];
     $descricao = $_POST['txtDescricao'];
-    #$imagem    = $_POST['txtImagem'];
     $imagem    = $pasta.$arquivo;
     $preco     = $_POST['txtPreco'];
     $estoque   = $_POST['txtEstoque'];

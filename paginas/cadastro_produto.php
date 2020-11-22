@@ -43,7 +43,7 @@
     <form class="tela-produto" action="<?=$acao_formulario?>" method="POST" enctype="multipart/form-data">
         <input class="entrada entrada-top" size=100 maxlength=100 value="<?=$campo['titulo']?>" type="text" id="txtTitulo" name="txtTitulo" placeholder="Título"><br>
         <input class="entrada entrada-top" size=100 maxlength=100 value="<?=$campo['descricao']?>" type="text" id="txtDescricao" name="txtDescricao" placeholder="Descrição"><br>
-        <input class="entrada entrada-top" size=50 maxlength=50 value="<?=$campo['imagem']?>" type="text" id="txtImagem" name="txtImagem" placeholder="Imagem">&nbsp;&nbsp;<input type="file" name="caminho" accept="image/*"><br>
+        <input class="entrada entrada-top" size=50 maxlength=50 value="<?=$campo['imagem']?>" type="text" id="txtImagem" name="txtImagem" placeholder="Imagem">&nbsp;&nbsp;<input type="file" id="caminho" name="caminho" accept="image/*" onchange="atualizarCaminhoImagem();"><br>
         <input class="entrada entrada-top" size=30 maxlength=30 value="<?=$campo['preco']?>" type="text" id="txtPreco" name="txtPreco" placeholder="Preço do produto"><br>
         <input class="entrada entrada-top" size=10 maxlength=10 value="<?=$campo['estoque']?>" type="text" id="txtEstoque" name="txtEstoque" placeholder="Estoque"><br>
         <input class="entrada entrada-top" size=10 maxlength=10 value="<?=$campo['ativo']?>" type="text" id="txtAtivo" name="txtAtivo" placeholder="Ativo?"><br>
@@ -53,3 +53,11 @@
         </div>
     </form>
 </div>    
+
+<script>
+    function atualizarCaminhoImagem(){
+        var arquivo = document.getElementById("caminho").files[0].name;
+
+        document.getElementById("txtImagem").value = "imagens/produtos/" + arquivo;
+    }
+</script>
