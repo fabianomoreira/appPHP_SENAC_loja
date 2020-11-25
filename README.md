@@ -3,7 +3,8 @@
 Projeto para ensino de HTML, CSS, SQL e PHP
 
 ### Para instalar o projeto
-```Faça o clone
+```
+   Faça o clone do branch master
    Execute o script de criação do banco
    Execute o script de carga do banco
 ```
