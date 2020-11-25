@@ -73,6 +73,12 @@ table td{
     box-shadow: 5px 10px 10px 5px black;
 }
 
+.tela-produto{
+    border: 2px solid gray;
+    width: 85%;   
+    box-shadow: 5px 10px 10px 5px black;    
+}
+
 .container{
     margin: 0 auto;
     width: 960px;
