@@ -1,9 +1,9 @@
 <?php
-    include 'banco.php';
+    include 'scripts/banco.php';
 
     $campo = array();
     $descricao_botao = 'Incluir tipo';
-    $acao_formulario = 'incluir_tipo_usuario.php';
+    $acao_formulario = 'scripts/incluir_tipo_usuario.php';
     $titulo_pagina = 'Cadastro de tipos de usuário';
 
     if(!isset($_GET['id'])){
@@ -12,7 +12,7 @@
         $id = $_GET['id'];
 
         $descricao_botao = 'Alterar tipo';
-        $acao_formulario = 'alterar_tipo_usuario.php?id='.$id;
+        $acao_formulario = 'scripts/alterar_tipo_usuario.php?id='.$id;
         $titulo_pagina = 'Alteração de tipos de usuário';
 
         $query = "SELECT * FROM tipo_usuario WHERE id_tipo = $id";

@@ -23,7 +23,7 @@
                 echo '<td align=center>'.$linha['estoque'].'</td>';
                 echo '<td align=center>'.$linha['ativo'].'</td>';
                 echo '<td class=tabela-celula><a href=?pagina=novo_produto&id='.$linha['id_produto'].'><img src=imagens/edicao.png width=20px></td>';
-                echo '<td class=tabela-celula><a href=excluir_produto.php?id='.$linha['id_produto'].'><img src=imagens/lixeira.png width=20px></a></td>';
+                echo '<td class=tabela-celula><a href=scripts/excluir_produto.php?id='.$linha['id_produto'].'><img src=imagens/lixeira.png width=20px></a></td>';
                 echo '</tr>';
             }
         ?>

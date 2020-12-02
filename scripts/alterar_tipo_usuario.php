@@ -11,5 +11,5 @@
     mysqli_query($conexao, $query);
 
     #echo $query;
-    header('location:index.php?pagina=tipos_usuario');
+    header('location:../index.php?pagina=tipos_usuario');
 ?>

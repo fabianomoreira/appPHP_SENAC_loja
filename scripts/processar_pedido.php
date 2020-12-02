@@ -34,5 +34,5 @@
         }
     }
 
-    header('location:index.php?pagina=pedido');
+    header('location:../index.php?pagina=pedido');
 ?>

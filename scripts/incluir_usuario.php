@@ -49,5 +49,5 @@
 
     mysqli_query($conexao, $query);
 
-    header('location:index.php?pagina=usuarios');
+    header('location:../index.php?pagina=usuarios');
 ?>

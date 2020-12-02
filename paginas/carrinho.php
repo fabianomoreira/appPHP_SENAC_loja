@@ -92,6 +92,6 @@
             ?>
         </table>
         <input class="link_botao" type="submit" value="Atualizar carrinho">
-        <input class="link_botao" type="button" value="Finalizar Compra" onclick="location.href='processar_pedido.php';">
+        <input class="link_botao" type="button" value="Finalizar Compra" onclick="location.href='scripts/processar_pedido.php';">
     </form>
 </div>

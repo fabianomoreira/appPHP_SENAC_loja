@@ -1,4 +1,4 @@
-<?php include 'banco.php'; ?>
+<?php include 'scripts/banco.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

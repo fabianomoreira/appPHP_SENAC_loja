@@ -7,5 +7,5 @@
 
     mysqli_query($conexao, $query);
 
-    header('location:index.php?pagina=produtos');
+    header('location:../index.php?pagina=produtos');
 ?>

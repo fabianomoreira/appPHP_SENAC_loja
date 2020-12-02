@@ -1,9 +1,9 @@
 <?php
-    include 'banco.php';
+    include 'scripts/banco.php';
 
     $campo = array();
     $descricao_botao = 'Incluir usuário';
-    $acao_formulario = 'incluir_usuario.php';
+    $acao_formulario = 'scripts/incluir_usuario.php';
     $titulo_pagina = 'Cadastro de usuários';
 
     // Preparação dos dados para a combo Estado
@@ -32,7 +32,7 @@
         $id = $_GET['id'];
 
         $descricao_botao = 'Alterar usuário';
-        $acao_formulario = 'alterar_usuario.php?id='.$id;
+        $acao_formulario = 'scripts/alterar_usuario.php?id='.$id;
         $titulo_pagina = 'Alteração de usuários';
 
         $query = "SELECT * FROM usuario WHERE id_usuario = $id";

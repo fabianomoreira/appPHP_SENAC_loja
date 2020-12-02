@@ -21,5 +21,5 @@
     mysqli_query($conexao, $query);
 
     #echo $query;
-    header('location:index.php?pagina=produtos');
+    header('location:../index.php?pagina=produtos');
 ?>
