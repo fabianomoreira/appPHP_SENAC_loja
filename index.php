@@ -37,6 +37,8 @@
                 include 'paginas/cadastro_produto.php';
             } else if($pagina == 'pedido'){
                 include 'paginas/pedido.php';
+            } else if($pagina == 'login'){
+                include 'paginas/login.php';
             } else {
                 include 'paginas/home.php'; 
             }
