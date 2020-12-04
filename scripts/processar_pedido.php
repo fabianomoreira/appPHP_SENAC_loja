@@ -13,7 +13,7 @@
         echo '<tr><td colspan=5>O carrinho está vazio!</td></tr>';
     } else if(isset($_SESSION['nome'])){
         // Gravação do Pedido
-        $sql = "INSERT INTO pedido(data_pedido, id_usuario) VALUES(now(), 1)";
+        $sql = "INSERT INTO pedido(data_pedido, id_usuario) VALUES(now(), ".$_SESSION['id_usuario'].")";
 
         $resultado = mysqli_query($conexao, $sql);
 
