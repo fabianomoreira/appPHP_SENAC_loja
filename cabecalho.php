@@ -23,10 +23,14 @@
             <a href="index.php?pagina=produtos">Produtos</a>
             <a href="index.php?pagina=tipos_usuario">Tipos</a>
             <a href="index.php?pagina=usuarios">Usuários</a>
+            <a href="scripts/processar_logout.php">Logout</a>
+            <?php
+                } else {
+            ?>
+            <a href="index.php?pagina=login">Login</a>
             <?php
                 }
             ?>
-            <a href="index.php?pagina=login">Login</a>
             <a href="?pagina=carrinho"><img src="<?=$imagem?>" width=35px></a>
         </div>
     </div>
