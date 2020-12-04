@@ -7,6 +7,8 @@
         $_SESSION['carrinho'] = array();
     }
 
+    $habilita = '';
+
     if(isset($_GET['acao'])){
 
         // Adicionar item ao carrinho
@@ -30,7 +32,7 @@
         }
 
         // Atualizar quantidade
-        if($_GET['acao'] == 'up'){
+        if($_GET['acao'] == 'up' && count($_SESSION['carrinho']) > 0){
             if(is_array($_POST['produto'])){
                 foreach($_POST['produto'] as $id => $qtd){
                     $id = intval($id);
@@ -60,6 +62,7 @@
                 $total = 0;
                 if(count($_SESSION['carrinho']) == 0){
                     echo '<tr><td colspan=5>O carrinho está vazio!</td></tr>';
+                    $habilita = 'disabled';
                 } else {
                     foreach($_SESSION['carrinho'] as $id => $qtd){
                         $sql = "SELECT * FROM produto WHERE id_produto='$id'";
@@ -94,7 +97,7 @@
         <table class="semborda">
             <tr>
                 <td align=center><input class="link_botao" type="submit" value="Atualizar carrinho"></td>
-                <td align=center><input class="link_botao" type="button" value="Finalizar Compra" onclick="location.href='scripts/processar_pedido.php';"></td>
+                <td align=center><input class="link_botao" <?=$habilita?> type="button" value="Finalizar Compra" onclick="location.href='scripts/processar_pedido.php';"></td>
             </tr>
         </table>
     </form>
