@@ -91,7 +91,11 @@
                 }
             ?>
         </table>
-        <input class="link_botao" type="submit" value="Atualizar carrinho">
-        <input class="link_botao" type="button" value="Finalizar Compra" onclick="location.href='scripts/processar_pedido.php';">
+        <table class="semborda">
+            <tr>
+                <td align=center><input class="link_botao" type="submit" value="Atualizar carrinho"></td>
+                <td align=center><input class="link_botao" type="button" value="Finalizar Compra" onclick="location.href='scripts/processar_pedido.php';"></td>
+            </tr>
+        </table>
     </form>
 </div>

@@ -11,7 +11,7 @@
 
     if(count($_SESSION['carrinho']) == 0){
         echo '<tr><td colspan=5>O carrinho está vazio!</td></tr>';
-    } else {
+    } else if(isset($_SESSION['nome'])){
         // Gravação do Pedido
         $sql = "INSERT INTO pedido(data_pedido, id_usuario) VALUES(now(), 1)";
 
@@ -34,5 +34,9 @@
         }
     }
 
-    header('location:../index.php?pagina=pedido');
+    if(!isset($_SESSION['nome'])){
+        header('location:../index.php?pagina=login');
+    } else {
+        header('location:../index.php?pagina=pedido');
+    }
 ?>

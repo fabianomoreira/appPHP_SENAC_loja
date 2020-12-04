@@ -21,26 +21,36 @@
                 $pagina = 'home';
             }
 
-            if($pagina == 'usuarios'){
-                include 'paginas/usuarios.php';
-            } else if($pagina == 'novo_usuario'){
-                include 'paginas/cadastro.php';
-            } else if($pagina == 'novo_tipo'){
-                include 'paginas/cadastro_tipo.php';
-            } else if($pagina == 'tipos_usuario'){
-                include 'paginas/tipos_usuario.php';
-            } else if($pagina == 'carrinho'){
-                include 'paginas/carrinho.php';
-            } else if($pagina == 'produtos'){
-                include 'paginas/produtos.php';
-            } else if($pagina == 'novo_produto'){
-                include 'paginas/cadastro_produto.php';
-            } else if($pagina == 'pedido'){
-                include 'paginas/pedido.php';
-            } else if($pagina == 'login'){
-                include 'paginas/login.php';
-            } else {
-                include 'paginas/home.php'; 
+            switch ($pagina) {
+                case 'usuarios':
+                    include 'paginas/usuarios.php';
+                    break;
+                case 'novo_usuario':
+                    include 'paginas/cadastro.php';
+                    break;
+                case 'novo_tipo':
+                    include 'paginas/cadastro_tipo.php';
+                    break;
+                case 'tipos_usuario':
+                    include 'paginas/tipos_usuario.php';
+                    break;
+                case 'carrinho':
+                    include 'paginas/carrinho.php';
+                    break;
+                case 'produtos':
+                    include 'paginas/produtos.php';
+                    break;
+                case 'novo_produto':
+                    include 'paginas/cadastro_produto.php';
+                    break;
+                case 'pedido':
+                    include 'paginas/pedido.php';
+                    break;
+                case 'login':
+                    include 'paginas/login.php';
+                    break;
+                default:
+                    include 'paginas/home.php'; 
             }
         ?>
     </div>
