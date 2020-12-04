@@ -17,9 +17,15 @@
     <div class="container">
         <a href="?pagina=home"><img src="imagens/logo.png" title="Logo" alt="Logo"></a>
         <div id="menu">
+            <?php
+                if(isset($_SESSION['nome'])){
+            ?>
             <a href="index.php?pagina=produtos">Produtos</a>
             <a href="index.php?pagina=tipos_usuario">Tipos</a>
             <a href="index.php?pagina=usuarios">Usuários</a>
+            <?php
+                }
+            ?>
             <a href="index.php?pagina=login">Login</a>
             <a href="?pagina=carrinho"><img src="<?=$imagem?>" width=35px></a>
         </div>
