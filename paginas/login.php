@@ -11,7 +11,7 @@
             <button class="link_botao" id="btnFuncao" type="submit">Entrar</button>
         </div>
         <div class="titulo">
-            <a href="#" style="padding-left: 35px">Não tem usuário? Cadastre-se</a>
+            <a href="index.php?pagina=novo_usuario" style="padding-left: 35px">Não tem usuário? Cadastre-se</a>
         </div>
     </form>
 </div>    

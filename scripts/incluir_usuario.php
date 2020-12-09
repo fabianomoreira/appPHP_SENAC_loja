@@ -16,6 +16,10 @@
     $telefone = $_POST['txtTelefone'];
     $tipo = $_POST['cmbTipo'];
 
+    if(!isset($_SESSION['nome'])){
+        $tipo = 3;
+    }
+
     $query = "INSERT INTO usuario(login,
                                   senha,
                                   nome,
@@ -49,5 +53,9 @@
 
     mysqli_query($conexao, $query);
 
-    header('location:../index.php?pagina=usuarios');
+    if(!isset($_SESSION['nome'])){
+        header('location:../index.php?pagina=home');
+    } else {
+        header('location:../index.php?pagina=usuarios');
+    }
 ?>

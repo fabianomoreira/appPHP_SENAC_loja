@@ -6,6 +6,13 @@
     $acao_formulario = 'scripts/incluir_usuario.php';
     $titulo_pagina = 'Cadastro de usuários';
 
+    // Caso não exista usuário logado não exibe a combo tipo de usuario
+    if(isset($_SESSION['nome'])){
+        $exibeCombo = '';
+    } else {
+        $exibeCombo = 'hidden';
+    }
+
     // Preparação dos dados para a combo Estado
     $query_estado = 'SELECT * FROM estado';
     $resultado_estado = mysqli_query($conexao, $query_estado);
@@ -41,7 +48,7 @@
 
         while($linha = mysqli_fetch_array($resultado)){
             $campo['login'] = $linha['login'];
-            $campo['senha'] = $linha['senha'];
+            $campo['senha'] = '';
             $campo['nome'] = $linha['nome'];
             $campo['email'] = $linha['email'];
             $campo['nascimento'] = substr($linha['nascimento'],8,2).'/'.substr($linha['nascimento'],5,2).'/'.substr($linha['nascimento'],0,4);
@@ -93,7 +100,7 @@
         <input class="entrada" type="text" size=10 value="<?=$campo['cep']?>" id="txtCep" name="txtCep" placeholder="CEP"><br>
         <input class="entrada" type="text" size=15 value="<?=$campo['telefone']?>" id="txtTelefone" name="txtTelefone" placeholder="Telefone"><br>
 
-        <select class="entrada" name="cmbTipo">
+        <select class="entrada" name="cmbTipo" <?=$exibeCombo?>>
             <option value="#">Selecione o tipo</option>
 
             <?php while($linha_tipo = mysqli_fetch_array($resultado_tipo)){

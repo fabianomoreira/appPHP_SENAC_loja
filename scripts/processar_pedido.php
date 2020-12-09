@@ -37,6 +37,6 @@
     if(!isset($_SESSION['nome'])){
         header('location:../index.php?pagina=login');
     } else {
-        header('location:../index.php?pagina=pedido');
+        header('location:../index.php?pagina=pedido?id_pedido='.$chave_pedido);
     }
 ?>

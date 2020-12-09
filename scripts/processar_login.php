@@ -16,6 +16,8 @@
     if($linha = mysqli_fetch_array($resultado)){
         $_SESSION['nome'] = $linha['nome'];
         $_SESSION['id_usuario'] = $linha['id_usuario'];
+        $_SESSION['tipo'] = $linha['id_tipo'];
+        
         header('location:../index.php?pagina=home');
     } else {
         header('location:../index.php?pagina=login');
