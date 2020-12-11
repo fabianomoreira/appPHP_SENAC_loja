@@ -73,14 +73,14 @@
     <form id="tela" action="<?=$acao_formulario?>" method="POST">
         <input class="entrada entrada-top" size=10 value="<?=$campo['login']?>" type="text" id="txtLogin" name="txtLogin" placeholder="Login"><br>
         <input class="entrada" type="text" size=10 value="<?=$campo['senha']?>" id="txtSenha" name="txtSenha" placeholder="Senha"><br>
-        <input class="entrada" type="text" size=50 value="<?=$campo['nome']?>" id="txtNome" name="txtNome" placeholder="Nome do usuário"><br>
+        <input class="entrada" type="text" size=50 value="<?=utf8_encode($campo['nome'])?>" id="txtNome" name="txtNome" placeholder="Nome do usuário"><br>
         <input class="entrada" type="text" size=30 value="<?=$campo['email']?>" id="txtEmail" name="txtEmail" placeholder="e-mail"><br>
         <input class="entrada" type="text" size=15 value="<?=$campo['nascimento']?>" id="txtNascimento" name="txtNascimento" placeholder="Data de Nascimento"><br>
-        <input class="entrada" type="text" size=50 value="<?=$campo['endereco']?>" id="txtEndereco" name="txtEndereco" placeholder="Endereço (Rua, Praça, etc...)"><br>
+        <input class="entrada" type="text" size=50 value="<?=utf8_encode($campo['endereco'])?>" id="txtEndereco" name="txtEndereco" placeholder="Endereço (Rua, Praça, etc...)"><br>
         <input class="entrada" type="text" size=5 value="<?=$campo['numero']?>" id="txtNumero" name="txtNumero" placeholder="Numero"><br>
         <input class="entrada" type="text" size=30 value="<?=$campo['complemento']?>" id="txtComplemento" name="txtComplemento" placeholder="Complemento (APT, etc...)"><br>
-        <input class="entrada" type="text" size=20 value="<?=$campo['bairro']?>"id="txtBairro" name="txtBairro" placeholder="Bairro"><br>
-        <input class="entrada" type="text" size=20 value="<?=$campo['cidade']?>" id="txtCidade" name="txtCidade" placeholder="Cidade"><br>
+        <input class="entrada" type="text" size=20 value="<?=utf8_encode($campo['bairro'])?>"id="txtBairro" name="txtBairro" placeholder="Bairro"><br>
+        <input class="entrada" type="text" size=20 value="<?=utf8_encode($campo['cidade'])?>" id="txtCidade" name="txtCidade" placeholder="Cidade"><br>
 
         <select class="entrada" name="cmbEstado">
             <option value="#">Selecione o estado</option>
@@ -92,7 +92,7 @@
                     $valor = '';
                 }
             ?>
-                <option value="<?=$linha_estado['id_estado']?>" <?=$valor?>><?=$linha_estado['descricao']?></option>
+                <option value="<?=$linha_estado['id_estado']?>" <?=$valor?>><?=utf8_encode($linha_estado['descricao'])?></option>
             <?php } ?>
         </select><br>
 

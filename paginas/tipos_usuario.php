@@ -17,7 +17,7 @@
         <?php
             while($linha = mysqli_fetch_array($tipo)){
                 echo '<tr>';
-                echo '<td>'.$linha['descricao'].'</td>';
+                echo '<td>'.utf8_encode($linha['descricao']).'</td>';
                 echo '<td class=tabela-celula><a href=?pagina=novo_tipo&id='.$linha['id_tipo'].'><img src=imagens/edicao.png width=20px></td>';
                 echo '<td class=tabela-celula><a href=scripts/excluir_tipo_usuario.php?id='.$linha['id_tipo'].'><img src=imagens/lixeira.png width=20px></a></td>';
                 echo '</tr>';

@@ -8,7 +8,7 @@
     <?php while($linha = mysqli_fetch_array($produtos)){?>
     <div class="produto-lista">
         <div class="produto-titulo">
-            <?=$linha['titulo']?>
+            <?=utf8_encode($linha['titulo'])?>
         </div>
         <div>
             <a href="?pagina=carrinho&id=<?=$linha['id_produto']?>&acao=add"><img src="<?=$linha['imagem']?>" width="150px"></a>

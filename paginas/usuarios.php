@@ -18,7 +18,7 @@
             while($linha = mysqli_fetch_array($consulta)){
                 echo '<tr>';
                 echo '<td>'.$linha['login'].'</td>';
-                echo '<td>'.$linha['nome'].'</td>';
+                echo '<td>'.utf8_encode($linha['nome']).'</td>';
                 echo '<td class=tabela-celula><a href=?pagina=novo_usuario&id='.$linha['id_usuario'].'><img src=imagens/edicao.png width=20px></td>';
                 echo '<td class=tabela-celula><a href=scripts/excluir_usuario.php?id='.$linha['id_usuario'].'><img src=imagens/lixeira.png width=20px></a></td>';
                 echo '</tr>';

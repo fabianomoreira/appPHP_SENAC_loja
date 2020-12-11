@@ -19,7 +19,7 @@
         <?php
             while($linha = mysqli_fetch_array($produto)){
                 echo '<tr>';
-                echo '<td>'.$linha['titulo'].'</td>';
+                echo '<td>'.utf8_encode($linha['titulo']).'</td>';
                 echo '<td align=center>'.$linha['estoque'].'</td>';
                 echo '<td align=center>'.$linha['ativo'].'</td>';
                 echo '<td class=tabela-celula><a href=?pagina=novo_produto&id='.$linha['id_produto'].'><img src=imagens/edicao.png width=20px></td>';
