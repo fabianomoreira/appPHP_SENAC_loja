@@ -2,6 +2,12 @@
     $query_produtos = 'SELECT * FROM produto WHERE ativo = TRUE';
 
     $produtos = mysqli_query($conexao, $query_produtos);
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    
+    $_SESSION['origem'] = '1';
 ?>
 
 <div style="display:flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap;">

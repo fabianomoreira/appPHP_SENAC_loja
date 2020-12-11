@@ -11,15 +11,19 @@
 
     if(isset($_GET['acao'])){
 
-        // Adicionar item ao carrinho
-        if($_GET['acao'] == 'add'){
-            $id = intval($_GET['id']);
+        if($_SESSION['origem'] == '1'){
+            // Adicionar item ao carrinho
+            if($_GET['acao'] == 'add'){
+                $id = intval($_GET['id']);
 
-            if(!isset($_SESSION['carrinho'][$id])){
-                $_SESSION['carrinho'][$id] = 1;
-            } else {
-                $_SESSION['carrinho'][$id] += 1;
+                if(!isset($_SESSION['carrinho'][$id])){
+                    $_SESSION['carrinho'][$id] = 1;
+                } else {
+                    $_SESSION['carrinho'][$id] += 1;
+                }
             }
+
+            $_SESSION['origem'] = 0;
         }
 
         // Remover item do carrinho
@@ -81,7 +85,7 @@
                         $subtotal = number_format($subtotal, 2, ',', '.');
 
                         echo '<tr>
-                                <td>'.$titulo.'</td>
+                                <td>'.utf8_encode($titulo).'</td>
                                 <td><input type="text" size="3" name="produto['.$id.']" value="'.$qtd.'"/></td>
                                 <td>R$ '.$preco.'</td>
                                 <td>R$ '.$subtotal.'</td>
