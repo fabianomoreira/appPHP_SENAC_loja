@@ -94,6 +94,11 @@ table td{
     width: 960px;
 }
 
+#conteudo{
+    height: 450px;
+    overflow: auto;    
+}
+
 .container-centro{
     display: flex;
     justify-content: center;
@@ -146,19 +151,21 @@ table td{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 20px;
     background-color: gray;
     margin: 25px 20px;
     padding: 5px;
-    height: 400px;
+    height: 100px;
     width: 40%;
     box-shadow: 5px 10px 10px 5px black;
+    border-radius: 1em;
 }
 
 .produto-titulo{
     display: flex;
-    padding-bottom: 20px;
+    padding: 10px;
+    font-size: 15px; 
     justify-content: center;
 }
 
@@ -166,7 +173,7 @@ table td{
     display: flex;
     justify-content: center;
     width: 40%; 
-    font-size: 30px; 
+    font-size: 20px; 
     color: white;
     padding: 20px
 }

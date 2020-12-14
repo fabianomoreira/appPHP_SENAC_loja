@@ -13,11 +13,11 @@
 <div style="display:flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap;">
     <?php while($linha = mysqli_fetch_array($produtos)){?>
     <div class="produto-lista">
+        <div style="padding-left: 10px">
+            <a href="?pagina=carrinho&id=<?=$linha['id_produto']?>&acao=add"><img src="<?=$linha['imagem']?>" width="55px"></a>
+        </div>
         <div class="produto-titulo">
             <?=utf8_encode($linha['titulo'])?>
-        </div>
-        <div>
-            <a href="?pagina=carrinho&id=<?=$linha['id_produto']?>&acao=add"><img src="<?=$linha['imagem']?>" width="150px"></a>
         </div>
         <div class="produto-preco">
             <?=$linha['preco']?>
